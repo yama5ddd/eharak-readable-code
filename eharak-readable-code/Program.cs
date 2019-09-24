@@ -10,11 +10,7 @@ namespace eharak_readable_code
         {
             if (args.Length <= 0)
             {
-                var appFilePath = Process.GetCurrentProcess().MainModule.FileName;
-                var appFileName = Path.GetFileName(appFilePath);
-                var errorMessage = string.Format("使い方 : {0} データファイル名のフルパス", appFileName);
-
-                Console.WriteLine(errorMessage);
+                PrintUsage();
                 return;
             }
 
@@ -29,6 +25,19 @@ namespace eharak_readable_code
             {
                 Console.WriteLine(ex.ToString());
             }
+        }
+
+        /// <summary>
+        /// プログラムの使い方を表示する
+        /// TODO：将来的には切り出してユーティリティクラス化するのが良さそう
+        /// </summary>
+        private static void PrintUsage()
+        {
+            var appFilePath = Process.GetCurrentProcess().MainModule.FileName;
+            var appFileName = Path.GetFileName(appFilePath);
+            var errorMessage = string.Format("使い方 : {0} データファイル名のフルパス", appFileName);
+
+            Console.WriteLine(errorMessage);
         }
     }
 }

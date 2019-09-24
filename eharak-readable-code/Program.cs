@@ -20,9 +20,11 @@ namespace eharak_readable_code
 
             try
             {
+                // 入力データファイルの登録順(行数)をIDとする
+                int id = 0;
                 foreach (var line in File.ReadLines(args[0]))
                 {
-                    Console.WriteLine(line);
+                    Console.WriteLine($"{++id}: {line}");
                 }
             }
             catch (Exception ex)

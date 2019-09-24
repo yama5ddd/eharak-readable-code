@@ -6,6 +6,10 @@ namespace eharak_readable_code
 {
     class Program
     {
+        /// <summary>
+        /// アプリケーションエントリーポイント
+        /// </summary>
+        /// <param name="args">コマンドライン引数</param>
         static void Main(string[] args)
         {
             if (args.Length <= 0)

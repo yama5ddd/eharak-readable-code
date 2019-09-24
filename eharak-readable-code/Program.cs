@@ -18,9 +18,16 @@ namespace eharak_readable_code
                 return;
             }
 
-            foreach (var line in File.ReadLines(args[0]))
+            try
             {
-                Console.WriteLine(line);
+                foreach (var line in File.ReadLines(args[0]))
+                {
+                    Console.WriteLine(line);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
         }
     }

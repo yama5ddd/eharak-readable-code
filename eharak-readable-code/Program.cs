@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace eharak_readable_code
 {
@@ -6,7 +7,10 @@ namespace eharak_readable_code
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("上手");
+            foreach (var line in File.ReadLines(args[0]))
+            {
+                Console.WriteLine(line);
+            }
         }
     }
 }

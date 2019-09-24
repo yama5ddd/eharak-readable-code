@@ -34,6 +34,7 @@ namespace eharak_readable_code
         /// <summary>
         /// プログラムの使い方を表示する
         /// TODO：将来的には切り出してユーティリティクラス化するのが良さそう
+        /// TODO：文字列のリソース化
         /// </summary>
         private static void PrintUsage()
         {
